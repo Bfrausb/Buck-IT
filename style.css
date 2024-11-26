@@ -1,0 +1,73 @@
+:root {
+    --bg-color: #111319;
+    --second-bg: #847DFF;
+    --text-color: #ffffff;
+}
+
+
+#User {
+    width: 200px;
+    height: 40px;
+    border-radius: 23px;
+    background: #fb7aff;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+ .centerForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    margin-top: 25px;
+} 
+
+.body {
+    background-color: var(bg-color);
+
+}
+.button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    margin-top: 15px;
+    line-height: 2rem;
+}
+
+input[type=text], select {
+    width: 70%;
+    max-width: 750px;
+    padding: 12px 20px;
+    margin: 10px 0;
+    display: inline-block;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+.logo {
+    color: #FFF;
+    text-shadow: 0px 4px 4px #554CFF;
+    font-family: "permanent marker", sans-serif;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 10px;
+    min-height: auto;
+    transform: rotate(-9.887deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    margin-top: 50px;
+    border: none;
+    padding: none;
+    --dark: #374151;
+    --darker: #1F2937;
+    --darkest: #111827;
+    --gray: #6B7280;
+    --light: #eee;
+    --pink: #EC4899;
+    --purple: #8B5cf6;
+}
