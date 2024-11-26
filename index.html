@@ -10,22 +10,25 @@
 </head>
 
 <body>
-    <div class="container">
-    <nav>
-    <h1 class="logo"> Buck'IT </h1>
+    <div>
+    <nav class="d-flex justify-content-center align-items-center h-100">
+    <h1> Buck'IT </h1>
     </nav>
     </section>
-        <div class="centerForm"> 
+        <div class="container"> 
             <div>   
                 <form>
-                    <label for="username">Username:</label>
-                    <input type="text">
-                        <div></div>
-                    <label for="password">Password:</label>
-                    <input type="text">
-                </form>
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Username</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <button type="button" class="btn btn-info">Log In</button>
+                  </form>
             </div>
-            <button class="button" id="User"> Log in</button>
         </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
