@@ -1,4 +1,4 @@
-:root{
+/* :root{
     --business: #73F6FC;
     --personal: #ffb9c5;
     --main-color: #a1008c;
@@ -143,5 +143,4 @@
         min-height: 150px;
         border-radius: 10px;
         background:var(--business);
-    }
-    
+}
