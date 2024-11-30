@@ -1,8 +1,20 @@
-/* :root{
+ :root{
     --business: #73F6FC;
     --personal: #ffb9c5;
+    --school: #7DD958;
+    --to-do: #FADA55;
     --main-color: #a1008c;
 }
+*{
+    background-color: rgb(43, 43, 42);
+    font-family: 'hallowed grounds', sans-serif;
+}
+
+#title{
+    color: white;
+
+}
+
 
     .header{
         position: fixed;
@@ -21,25 +33,28 @@
     .home-content{
         display: flex;
         flex-direction: column;
-        align-items: baseline;
+        align-items: left;
         text-align: center;
         justify-content: center;
     }
 
     span{
-        color: var(--main-color);
+        color: rgb(255, 42, 42);
     }
-    }
+    
     .home-content h3{
         margin-bottom: 1rem;
         margin-top: 1rem;
         font-size: 1.5rem;
+        color: white;
     }
     .home-content h1{
-        font-size: 2rem;
-        font-weight: 300;
+        color: white;
+        font-size: 1.5rem;
+        font-weight: 200;
         margin-top: 0.5rem;
         line-height: 1;
+       
     }
     
     .text-animation{
@@ -52,12 +67,12 @@
     }
     .text-animation span::before{
         content: "Students";
-        color: var(--main-color);
+        color: rgb(255, 42, 42);
         animation: words 20s infinite;
     }
     .text-animation span::after{
         content: "";
-        background-color: white;
+        background-color: rgb(43, 43, 42);
         position: absolute;
         width: calc(100% + 8px);
         height: 100%;
@@ -117,30 +132,106 @@
     .to-do-app{
         display: flex;
         align-items: center;
+        flex-direction: inline;
+        justify-content: space-around;
+        border-bottom: 5px solid var(--main-color);
+        border-top: 5px solid var(--main-color);
+        
+
 
     }
 
     .to-do-app button{
         display: flex;
-        justify-content: space-between;
-        border-radius: 10px;
-        background-color: gray;
+        justify-content: space-around;
+        align-items: center;
+        padding: 5px;
+        border: 10px;
+        border-radius: 15px;
+        background-color: rgb(0, 0, 0);
     }
 
     .to-do-app #business{
         color: var(--business);
     }
 
+    .to-do-app #business:hover {
+        box-shadow: 0 0 25px var(--business),
+        0 0 50px var(--business),
+        0 0 100px var(--business);
+    }
+
     .to-do-app #personal{
         color: var(--personal);
     }
 
-    .input {
-        position: relative;
+    .to-do-app #personal:hover{
+        box-shadow: 0 0 25px var(--personal),
+        0 0 50px var(--personal),
+        0 0 100px var(--personal);
+    }
+
+    .to-do-app #school{
+        color: var(--school);
+    }
+    .to-do-app #school:hover{
+        box-shadow: 0 0 25px var(--school),
+        0 0 50px var(--school),
+        0 0 100px var(--school);
+    }
+
+    .to-do-app #help{
+        color: white;
+    }
+
+    .to-do-app #help:hover{
+        box-shadow: 0 0 25px white,
+        0 0 50px white,
+        0 0 100px white;
+    }
+
+    .to-do-app #to-do{
+        color: var(--to-do);
+    }
+    .to-do-app #to-do:hover{
+        box-shadow: 0 0 25px var(--to-do),
+        0 0 50px var(--to-do),
+        0 0 100px var(--to-do);
+    }
+
+   #to-do-container .sticky-note {
+        position: absolute;
+        width: max-content;
         display: block;
-        width: 100%;
-        max-width: 500px;
-        min-height: 150px;
+        font-style: normal;
+        font-size: 0.95rem;
+        font-family: 'pernament marker', sans-serif;
+        top: 250px;
+        left: 75px; 
+        min-height: 200px;
+        border-top: 30px solid rgb(65, 64, 64);
         border-radius: 10px;
-        background:var(--business);
+        padding: 10px;
+        box-shadow: 0 20px 50px #0004;
+        cursor: grab;
+    
+
 }
+
+#to-do-container textarea{
+    all:unset;
+    border:none;
+}
+
+#to-do-container .close{
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    height: 30px;
+    font-size: large;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+
+
