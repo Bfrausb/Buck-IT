@@ -4,8 +4,8 @@ const personalBttn = document.querySelector('#personal');
 const schoolBttn = document.querySelector('#school');
 const toDoBttn = document.querySelector('#to-do');
 const help = document.querySelector('#help');
-const modal = document.querySelector('#modal');
-let todoContainer = document.getElementById('to-do-container');
+const modal = document.getElementById('modal-dialog modal-dialog-scrollable');
+let todoContainer = document.getElementById('modal');
 
 
 
