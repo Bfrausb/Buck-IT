@@ -1,44 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do-App</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style2.css"/>
+    <link rel="stylesheet" href="style2.css" />
 </head>
-<body>
-    <header>
+
+  <div class="background">
+  <header>
         <nav>
-        <h1 class="d-flex justify-content-center align-items-center h-100">Buck' <span>IT</span></h1>
-        <div class="container">
-            <section class="home" id="home">
-                <div class="home-content">
-                    <h1>Hello World, It's <span>Team 4</span></h1>
-                    <h3 class="text-animation">We are <span></span></h3>
+            <h1 class="d-flex justify-content-center align-items-center h-100" id="title">Buck' <span>IT</span></h1>
+            <div class="container">
+                <section class="home" id="home">
+                    <div class="home-content">
+                        <h1>Hello World, It's <span>Team 4</span></h1>
+                        <h3 class="text-animation">We are <span></span></h3>
+                    </div>
+        </nav>
+        </section>
+        <div class="to-do-app">
+
+            <button id="help">Help</button>
+            <button id="business">Business</button>
+            <button id="personal">Personal</button>
+            <button id="school">School</button>
+            <button id="to-do">To-Do</button>
+            <div id="helpModal" class="modal">
+              <div class="modal-content">
+                  <span class="modalexit">&times;</span>
+                  <h2 class="modalheader">Help Guide</h2>
+                  <p>Create a Note:
+                    <ul> 
+                      <li>Select the type of to-do from the options provided in the selection bar to generate a note </li>
+                      <li>Once the note is generated click on the note where it says "start typing"</li>
+                      <li>Click and drag the note where on the page you would like it to be</li>
+                      <li>Make a new selection from the selection bar for the next note to generate</li>
+                    </ul>
+                    Delete a Note:
+                    <ul>
+                      <li> Click on the X located at the top right of the note </li>
+                    </ul>
+                    Report a Problem:
+                    <ul>
+                      <li> Can't be this site is perfect! </li>
+                    </ul>
+                  </p>
+              </div>
+          </div>
+        </div>
+
+
+    </header>
+
+    <body>
+        <main>
+            <div class="container-fluid">
+              </div>
+
+            <div id="to-do-container">
                 </div>
-            </nav>
-            </section>
-            <div class="to-do-app">
-               <h2>To-do App</h2>
-               <button id="business">Business</button>
-               <button id="personal">Personal</button>
             </div>
+        </main>
+        <script src="script2.js"></script>
+    </body>
+  </div>
 
-
-        </header>
-        <body>
-            <div class="to-do-container" id="business-cont">
-                <p contenteditable="true" class="input">
-                   <button id="delete-bttn">X</button>
-                </p>
-            </div>
-        </body>
-    </main>
-   <script src="script2.js"></script> 
-</body>
 </html>

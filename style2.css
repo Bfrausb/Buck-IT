@@ -1,7 +1,25 @@
-/* :root{
+ :root{
     --business: #73F6FC;
     --personal: #ffb9c5;
-    --main-color: #a1008c;
+    --school: #7DD958;
+    --to-do: #FADA55;
+    --main-color: #8a6ee5;
+    --headerbackgroundcolor: rgb(138 110 229 / .5);
+}
+*{
+    font-family: 'hallowed grounds', sans-serif;
+}
+
+#title{
+    color: white;
+
+}
+
+.background {
+    background-image: url('https://imgur.com/bxTl2ld.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center; height: 100vh;
 }
 
     .header{
@@ -21,7 +39,7 @@
     .home-content{
         display: flex;
         flex-direction: column;
-        align-items: baseline;
+        align-items: left;
         text-align: center;
         justify-content: center;
     }
@@ -29,17 +47,20 @@
     span{
         color: var(--main-color);
     }
-    }
+    
     .home-content h3{
         margin-bottom: 1rem;
         margin-top: 1rem;
         font-size: 1.5rem;
+        color: white;
     }
     .home-content h1{
-        font-size: 2rem;
-        font-weight: 300;
+        color: white;
+        font-size: 1.5rem;
+        font-weight: 200;
         margin-top: 0.5rem;
         line-height: 1;
+       
     }
     
     .text-animation{
@@ -57,7 +78,6 @@
     }
     .text-animation span::after{
         content: "";
-        background-color: white;
         position: absolute;
         width: calc(100% + 8px);
         height: 100%;
@@ -117,53 +137,142 @@
     .to-do-app{
         display: flex;
         align-items: center;
-
+        flex-direction: inline;
+        justify-content: space-around;
+        background-color: var(--headerbackgroundcolor);
     }
 
     .to-do-app button{
         display: flex;
-        justify-content: space-between;
-        border-radius: 10px;
-        background-color: gray;
+        justify-content: space-around;
+        align-items: center;
+        padding: 5px;
+        border: 10px;
+        border-radius: 15px;
+        background-color: transparent;
     }
 
     .to-do-app #business{
         color: var(--business);
+        font-weight: bolder;
+    }
+
+    .to-do-app #business:hover {
+        box-shadow: 0 0 25px var(--business),
+        0 0 50px var(--business),
+        0 0 100px var(--business);
     }
 
     .to-do-app #personal{
         color: var(--personal);
+        font-weight: bolder;
     }
 
-    .input {
-        position: relative;
-        width: 100%;
-        max-width: 500px;
-        min-height: 150px;
+    .to-do-app #personal:hover{
+        box-shadow: 0 0 25px var(--personal),
+        0 0 50px var(--personal),
+        0 0 100px var(--personal);
+    }
+
+    .to-do-app #school{
+        color: var(--school);
+        font-weight: bolder;
+    }
+    .to-do-app #school:hover{
+        box-shadow: 0 0 25px var(--school),
+        0 0 50px var(--school),
+        0 0 100px var(--school);
+    }
+
+    .to-do-app #help{
+        color: white;
+        font-weight: bolder;
+    }
+
+    .to-do-app #help:hover{
+        box-shadow: 0 0 25px white,
+        0 0 50px white,
+        0 0 100px white;
+    }
+
+    .to-do-app #to-do{
+        color: var(--to-do);
+        font-weight: bolder;
+    }
+    .to-do-app #to-do:hover{
+        box-shadow: 0 0 25px var(--to-do),
+        0 0 50px var(--to-do),
+        0 0 100px var(--to-do);
+    }
+
+   #to-do-container .sticky-note {
+        position: absolute;
+        width: max-content;
+        display: block;
+        font-style: normal;
+        font-size: 0.95rem;
+        font-family: 'pernament marker', sans-serif;
+        top: 250px;
+        left: 75px; 
+        min-height: 200px;
+        border-top: 30px solid rgb(65, 64, 64);
         border-radius: 10px;
-        background:var(--business);
-    }
-
-
-    
-.input #business{
-    position: relative;
-    width: 100%;
-    max-width: 500px;
-    min-height: 150px;
-    border-radius: 10px;
-    background: var(--business);
-}
-.input #personal{
-    position: relative;
-    width: 100%;
-    max-width: 500px;
-    min-height: 150px;
-    border-radius: 10px;
-    background: var(--personal);
+        padding: 10px;
+        box-shadow: 0 20px 50px #0004;
+        cursor: grab;
 }
 
-    #delete-bttn{
-        border-radius: 5px;
-        border: none;
-    } */
+#to-do-container textarea{
+    all:unset;
+    border:none;
+}
+
+#to-do-container .close{
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    height: 30px;
+    font-size: large;
+    padding-right: 10px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto; 
+    background-color: rgb(43, 43, 42); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    background-color: rgb(43, 43, 42);
+    color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    cursor: pointer; 
+}
+
+.modalexit {
+        position: absolute;
+        bottom: 91%;
+        right: 0;
+        font-size: large;
+        padding-right: 10px;
+        cursor: pointer;
+}
+
+.modalheader{
+    position: relative;
+    text-align: center;
+}
