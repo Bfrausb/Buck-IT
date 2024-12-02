@@ -2,12 +2,13 @@
     padding: 8px;
     height: 85px;
 }
-
+/* 
 h1 {
     margin-top: 100px;
     text-align: center;
     color: white;
-}
+    
+} */
 
 .container {
     background-color: #8a6ee5;
@@ -17,10 +18,14 @@ h1 {
     text-align: center;
     color: white;
     background-repeat: no-repeat;
-    position: absolute;
-    top: 50%;
-    right: 20%;
-    transform: translate(-50%,-50%);
+    padding-top: 35px;
+
+}
+.centerform {
+    position: flex;
+    align-items: center;
+    margin: auto;
+    padding-top: 50px;
 }
 
 body {
@@ -29,13 +34,11 @@ body {
     background-size: cover;
     background-attachment: fixed;
     background-position: center; height: 100vh;
-    position: flex;
-    align-items: center;
-
 } 
 
 #login{
     color:pink;
+    border-radius: 50%;
 }
 
 #login:hover{
@@ -43,4 +46,20 @@ body {
     0 0 50px red,
     0 0 100px red;
 
+}
+
+#logo {
+    background-image: url('https://imgur.com/5Shv5hn.png');
+}
+
+.header img {
+    display: flex;
+    height: 170px;
+    width: 450px;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-left: 55px;
+    align-items: center;
+    justify-content: center;
 }
