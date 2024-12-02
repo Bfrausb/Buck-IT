@@ -1,146 +1,156 @@
-/* :root{
-    --business: #73F6FC;
-    --personal: #ffb9c5;
-    --main-color: #a1008c;
-}
+ :root {
+     --business: #73F6FC;
+     --personal: #ffb9c5;
+     --main-color: #a1008c;
+ }
 
-    .header{
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        padding: 4rem 12% 4rem;
-        background: rgba (0, 0, 0, 0.3);
-        backdrop-filter: blur(10px);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        z-index: 5;
-    }
+ .header {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     padding: 4rem 12% 4rem;
+     background: rgba (0, 0, 0, 0.3);
+     backdrop-filter: blur(10px);
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     z-index: 5;
+ }
 
-    .home-content{
-        display: flex;
-        flex-direction: column;
-        align-items: baseline;
-        text-align: center;
-        justify-content: center;
-    }
+ .home-content {
+     display: flex;
+     flex-direction: column;
+     align-items: baseline;
+     text-align: center;
+     justify-content: center;
+ }
 
-    span{
-        color: var(--main-color);
-    }
-    }
-    .home-content h3{
-        margin-bottom: 1rem;
-        margin-top: 1rem;
-        font-size: 1.5rem;
-    }
-    .home-content h1{
-        font-size: 2rem;
-        font-weight: 300;
-        margin-top: 0.5rem;
-        line-height: 1;
-    }
-    
-    .text-animation{
-        font-size: 25px;
-        font-weight: 500;
-        min-width: 280px;
-    }
-    .text-animation span{
-        position: relative;
-    }
-    .text-animation span::before{
-        content: "Students";
-        color: var(--main-color);
-        animation: words 20s infinite;
-    }
-    .text-animation span::after{
-        content: "";
-        background-color: white;
-        position: absolute;
-        width: calc(100% + 8px);
-        height: 100%;
-        border-left: 3px solid var(--business);
-        right: -8px;
-        animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
-    }
-    
-    @keyframes words{
-        0%
-        20%{
-            content: "Creative Thinkers";
-        }
-        21%,
-        40%{
-            content: "Engineers";
-        }
-        41%,
-        60%{
-            content: "Problem Solvers";  
-        }
-        61%,
-        80%{
-            content: "Software Developers";
-        }
-        81%,
-        100%{
-            content: "Go-Getters";
-        }
-    }
-    @keyframes typing{
-        10%,
-        15%,
-        30%,
-        35%,
-        50%,
-        55%,
-        70%,
-        75%,
-        90%,
-        95%{
-            width: 0;
-        }
-        5%,
-        20%,
-        25%,
-        40%,
-        45%,
-        60%,
-        65%,
-        80%,
-        85%{
-            width: calc(100% + 8px);
-        }
-    }
+ span {
+     color: var(--main-color);
+ }
 
-    .to-do-app{
-        display: flex;
-        align-items: center;
+ .home-content h3 {
+     margin-bottom: 1rem;
+     margin-top: 1rem;
+     font-size: 1.5rem;
+ }
 
-    }
+ .home-content h1 {
+     font-size: 2rem;
+     font-weight: 300;
+     margin-top: 0.5rem;
+     line-height: 1;
+ }
 
-    .to-do-app button{
-        display: flex;
-        justify-content: space-between;
-        border-radius: 10px;
-        background-color: gray;
-    }
+ .text-animation {
+     font-size: 25px;
+     font-weight: 500;
+     min-width: 280px;
+ }
 
-    .to-do-app #business{
-        color: var(--business);
-    }
+ .text-animation span {
+     position: relative;
+ }
 
-    .to-do-app #personal{
-        color: var(--personal);
-    }
+ .text-animation span::before {
+     content: "Students";
+     color: var(--main-color);
+     animation: words 20s infinite;
+ }
 
-    .input {
-        position: relative;
-        display: block;
-        width: 100%;
-        max-width: 500px;
-        min-height: 150px;
-        border-radius: 10px;
-        background:var(--business);
-}
+ .text-animation span::after {
+     content: "";
+     background-color: white;
+     position: absolute;
+     width: calc(100% + 8px);
+     height: 100%;
+     border-left: 3px solid var(--business);
+     right: -8px;
+     animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+ }
+
+ @keyframes words {
+     0% 20% {
+         content: "Creative Thinkers";
+     }
+
+     21%,
+     40% {
+         content: "Engineers";
+     }
+
+     41%,
+     60% {
+         content: "Problem Solvers";
+     }
+
+     61%,
+     80% {
+         content: "Software Developers";
+     }
+
+     81%,
+     100% {
+         content: "Go-Getters";
+     }
+ }
+
+ @keyframes typing {
+
+     10%,
+     15%,
+     30%,
+     35%,
+     50%,
+     55%,
+     70%,
+     75%,
+     90%,
+     95% {
+         width: 0;
+     }
+
+     5%,
+     20%,
+     25%,
+     40%,
+     45%,
+     60%,
+     65%,
+     80%,
+     85% {
+         width: calc(100% + 8px);
+     }
+ }
+
+ .to-do-app {
+     display: flex;
+     align-items: center;
+
+ }
+
+ .to-do-app button {
+     display: flex;
+     justify-content: space-between;
+     border-radius: 10px;
+     background-color: gray;
+ }
+
+ .to-do-app #business {
+     color: var(--business);
+ }
+
+ .to-do-app #personal {
+     color: var(--personal);
+ }
+
+ .input {
+     position: relative;
+     display: block;
+     width: 100%;
+     max-width: 500px;
+     min-height: 150px;
+     border-radius: 10px;
+     background: var(--business);
+ }
