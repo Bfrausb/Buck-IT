@@ -1,11 +1,12 @@
-
 const businessBttn = document.querySelector('#business');
 const personalBttn = document.querySelector('#personal');
 const schoolBttn = document.querySelector('#school');
 const toDoBttn = document.querySelector('#to-do');
-const help = document.querySelector('#help');
-const modal = document.getElementById('modal-dialog modal-dialog-scrollable');
-let todoContainer = document.getElementById('modal');
+const modal = document.getElementById("helpModal");
+const helpguide = document.getElementById("help");
+const modalexit = document.getElementsByClassName("modalexit")[0];
+const exit = document.querySelector('#exit');
+let todoContainer = document.getElementById('to-do-container');
 
 
 
@@ -21,7 +22,7 @@ businessBttn.addEventListener('click', () => {
   let newSticky = document.createElement('div');
   newSticky.classList.add('sticky-note');
   newSticky.innerHTML = 
-  '<span class="close">X</span> <textarea placeholder="start typing..." rows="10" cols="30"></textarea></>';
+  '<span class="close">&times</span> <textarea placeholder="start typing..." rows="10" cols="30"></textarea></>';
   newSticky.style.background = 'var(--business)';
   todoContainer.appendChild(newSticky);
 
@@ -32,7 +33,7 @@ businessBttn.addEventListener('click', () => {
     let newSticky = document.createElement('div');
     newSticky.classList.add('sticky-note');
     newSticky.innerHTML = 
-    '<span class="close">X</span> <textarea placeholder="start typing..." rows="10" cols="30"></textarea></>';
+    '<span class="close">&times</span> <textarea placeholder="start typing..." rows="10" cols="30"></textarea></>';
     newSticky.style.background = 'var(--school)';
     todoContainer.appendChild(newSticky);
   
@@ -44,7 +45,7 @@ personalBttn.addEventListener('click', () => {
   let newSticky = document.createElement('div');
   newSticky.classList.add('sticky-note');
   newSticky.innerHTML = 
-  '<span class="close">X</span> <textarea placeholder="start typing..." rows="10" cols="30"></textarea></>';
+  '<span class="close">&times</span> <textarea placeholder="start typing..." rows="10" cols="30"></textarea></>';
   newSticky.style.background = 'var(--personal)';
   todoContainer.appendChild(newSticky);
 
@@ -55,7 +56,7 @@ personalBttn.addEventListener('click', () => {
     let newSticky = document.createElement('div');
     newSticky.classList.add('sticky-note');
     newSticky.innerHTML = 
-    '<span class="close">X</span> <textarea placeholder="start typing..." rows="10" cols="30"></textarea><p><u></u></p>';
+    '<span class="close">&times</span> <textarea placeholder="start typing..." rows="10" cols="30"></textarea><p><u></u></p>';
     newSticky.style.background = 'var(--to-do)';
     newSticky.style.cursor = 'cursor';
     todoContainer.appendChild(newSticky);
@@ -63,9 +64,23 @@ personalBttn.addEventListener('click', () => {
   
     })
 
-    help.addEventListener('click', ()=>{
-      modal.show();
-    })
+
+// When the user clicks the button, open the modal 
+helpguide.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+modalexit.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
 
 
 // Here we added an on click event listener with a conditional statement. 
@@ -147,5 +162,3 @@ personalBttn.addEventListener('click', () => {
     if(sticky.dom == null) return;
       sticky.dom = null;
   })
-  
-  

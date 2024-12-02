@@ -3,10 +3,10 @@
     --personal: #ffb9c5;
     --school: #7DD958;
     --to-do: #FADA55;
-    --main-color: #a1008c;
+    --main-color: #8a6ee5;
+    --headerbackgroundcolor: rgb(138 110 229 / .5);
 }
 *{
-    background-color: rgb(43, 43, 42);
     font-family: 'hallowed grounds', sans-serif;
 }
 
@@ -15,6 +15,12 @@
 
 }
 
+.background {
+    background-image: url('https://imgur.com/bxTl2ld.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center; height: 100vh;
+}
 
     .header{
         position: fixed;
@@ -39,7 +45,7 @@
     }
 
     span{
-        color: rgb(255, 42, 42);
+        color: var(--main-color);
     }
     
     .home-content h3{
@@ -67,12 +73,11 @@
     }
     .text-animation span::before{
         content: "Students";
-        color: rgb(255, 42, 42);
+        color: var(--main-color);
         animation: words 20s infinite;
     }
     .text-animation span::after{
         content: "";
-        background-color: rgb(43, 43, 42);
         position: absolute;
         width: calc(100% + 8px);
         height: 100%;
@@ -134,11 +139,7 @@
         align-items: center;
         flex-direction: inline;
         justify-content: space-around;
-        border-bottom: 5px solid var(--main-color);
-        border-top: 5px solid var(--main-color);
-        
-
-
+        background-color: var(--headerbackgroundcolor);
     }
 
     .to-do-app button{
@@ -148,11 +149,12 @@
         padding: 5px;
         border: 10px;
         border-radius: 15px;
-        background-color: rgb(0, 0, 0);
+        background-color: transparent;
     }
 
     .to-do-app #business{
         color: var(--business);
+        font-weight: bolder;
     }
 
     .to-do-app #business:hover {
@@ -163,6 +165,7 @@
 
     .to-do-app #personal{
         color: var(--personal);
+        font-weight: bolder;
     }
 
     .to-do-app #personal:hover{
@@ -173,6 +176,7 @@
 
     .to-do-app #school{
         color: var(--school);
+        font-weight: bolder;
     }
     .to-do-app #school:hover{
         box-shadow: 0 0 25px var(--school),
@@ -182,6 +186,7 @@
 
     .to-do-app #help{
         color: white;
+        font-weight: bolder;
     }
 
     .to-do-app #help:hover{
@@ -192,6 +197,7 @@
 
     .to-do-app #to-do{
         color: var(--to-do);
+        font-weight: bolder;
     }
     .to-do-app #to-do:hover{
         box-shadow: 0 0 25px var(--to-do),
@@ -214,8 +220,6 @@
         padding: 10px;
         box-shadow: 0 20px 50px #0004;
         cursor: grab;
-    
-
 }
 
 #to-do-container textarea{
@@ -231,7 +235,44 @@
     font-size: large;
     padding-right: 10px;
     cursor: pointer;
+    background-color: transparent;
 }
 
 
 
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto; 
+    background-color: rgb(43, 43, 42); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    background-color: rgb(43, 43, 42);
+    color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    cursor: pointer; 
+}
+
+.modalexit {
+        position: absolute;
+        bottom: 91%;
+        right: 0;
+        font-size: large;
+        padding-right: 10px;
+        cursor: pointer;
+}
+
+.modalheader{
+    position: relative;
+    text-align: center;
+}
