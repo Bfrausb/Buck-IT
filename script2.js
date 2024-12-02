@@ -33,7 +33,7 @@ businessBttn.addEventListener('click', () => {
     let newSticky = document.createElement('div');
     newSticky.classList.add('sticky-note');
     newSticky.innerHTML = 
-    '<span class="close">&times</span> <textarea placeholder="start typing..." rows="1" cols="20"></textarea></>';
+    '<span class="close">&times</span> <textarea placeholder="start typing..." rows="10" cols="30"></textarea></>';
     newSticky.style.background = 'var(--school)';
     todoContainer.appendChild(newSticky);
   
