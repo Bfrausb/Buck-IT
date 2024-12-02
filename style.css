@@ -19,7 +19,7 @@ h1 {
     background-repeat: no-repeat;
     position: absolute;
     top: 50%;
-    right: 50%;
+    right: 20%;
     transform: translate(-50%,-50%);
 
 }
