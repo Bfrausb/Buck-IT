@@ -5,7 +5,7 @@ As a busy person, I want to create an app that can help me structure my day and 
 
 ## Acceptance Criteria - Features
 
-*It's done when can acess sign-in page and sign-in successfully.
+*It's done when can access sign-in page and sign-in successfully.
 
 *It's done when I can access a landing page to create my stickies: Personal, Business, School and Todo.
 
@@ -13,7 +13,7 @@ As a busy person, I want to create an app that can help me structure my day and 
 
 *It's done when I can add a task and use the corresponding color.
 
-*It's done when i can delete a sticky and move around the screen.
+*It's done when i can delete a sticky, autosave by adding text to a sticky and move around the screen.
 
 
 
@@ -36,7 +36,11 @@ The following image demonstrates the web application's appearance and functional
 ## Direction for future development
 
 *Add Calender events and reminders to sync up to e-mail
+
 *Option to archive notes by date/year
+
 *Ability to overlap stickies in any order
+
 *Option to title sticky notes
+
 *Nav bar to add options to share to social media, contact, info and help to report sign-in issues.
