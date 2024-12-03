@@ -80,6 +80,7 @@
         content: "";
         position: absolute;
         width: calc(100% + 8px);
+        background-color: rgb(51,51,51);
         height: 100%;
         border-left: 3px solid var(--business);
         right: -8px;
@@ -186,6 +187,7 @@
 
     .to-do-app #help{
         color: white;
+        cursor: help;
         font-weight: bolder;
     }
 
@@ -218,7 +220,7 @@
         border-top: 30px solid rgb(65, 64, 64);
         border-radius: 10px;
         padding: 10px;
-        box-shadow: 0 20px 50px #0004;
+        box-shadow: 0 20px 50px rgba(190, 189, 117, 0.301);
         cursor: grab;
 }
 
@@ -230,6 +232,7 @@
 
 #to-do-container .close{
     position: absolute;
+    color: red;
     bottom: 100%;
     right: 0;
     height: 30px;
