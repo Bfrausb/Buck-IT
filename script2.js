@@ -10,45 +10,67 @@ let todoContainer = document.getElementById('to-do-container');
 
 
 
+
 // The added event listener for each declared button gives the button the code to run when the user 'clicks' on it.
 
 // We created a text area using the inner HTML property and styled it according to its specific button using the previously declared root variables in our linked stylesheet
 
 // We then appended the newly created sticky note to our parent container to be manipulated later on
 
-
+function savesticky(newSticky){
+  let stickyNotes = JSON.parse(localStorage.getItem('sticky-notes')) || [];
+  const newStickyContent = newSticky.value;
+  stickyNotes.push(newStickyContent);
+  console.log(newStickyContent);
+  localStorage.setItem('sticky-notes', JSON.stringify(stickyNotes));
+}
 
 businessBttn.addEventListener('click', () => {
   let newSticky = document.createElement('div');
   newSticky.classList.add('sticky-note');
   newSticky.innerHTML = 
-  '<span class="close">&times</span> <textarea placeholder="start typing..." rows="10" cols="30"></textarea></>';
+  '<span class="close">&times</span> <textarea id="businessbttn" placeholder="start typing..." rows="10" cols="30"></textarea></>';
   newSticky.style.background = 'var(--business)';
   todoContainer.appendChild(newSticky);
-
-
+  const bbuttonContent = document.getElementById("businessbttn");
+ // newSticky.querySelector('textarea').value.push(newStickyContent);
+ console.log(bbuttonContent);
+  bbuttonContent.addEventListener('change', () =>{
+    console.log(newSticky);
+    savesticky(bbuttonContent);
   })
+  })
+
 
   schoolBttn.addEventListener('click', () => {
     let newSticky = document.createElement('div');
     newSticky.classList.add('sticky-note');
     newSticky.innerHTML = 
-    '<span class="close">&times</span> <textarea placeholder="start typing..." rows="10" cols="30"></textarea></>';
+    '<span class="close">&times</span> <textarea id= "schoolbttn" placeholder="start typing..." rows="10" cols="30"></textarea></>';
     newSticky.style.background = 'var(--school)';
     todoContainer.appendChild(newSticky);
-  
-  
+    const sbuttonContent = document.getElementById("schoolbttn"); 
+
+    sbuttonContent.addEventListener('change', () =>{
+    
+      savesticky(sbuttonContent);
     })
+  })
+    
 
 
 personalBttn.addEventListener('click', () => {
   let newSticky = document.createElement('div');
   newSticky.classList.add('sticky-note');
   newSticky.innerHTML = 
-  '<span class="close">&times</span> <textarea placeholder="start typing..." rows="10" cols="30"></textarea></>';
+  '<span class="close">&times</span> <textarea id="perBttn" placeholder="start typing..." rows="10" cols="30"></textarea></>';
   newSticky.style.background = 'var(--personal)';
   todoContainer.appendChild(newSticky);
+const perBttn = document.getElementById('perBttn');
 
+perBttn.addEventListener('change', () => {
+  savesticky(perBttn);
+})
 
   })
 
@@ -56,13 +78,20 @@ personalBttn.addEventListener('click', () => {
     let newSticky = document.createElement('div');
     newSticky.classList.add('sticky-note');
     newSticky.innerHTML = 
-    '<span class="close">&times</span> <textarea placeholder="start typing..." rows="10" cols="30"></textarea><p><u></u></p>';
+    '<span class="close">&times</span> <textarea id="todoBttn" placeholder="start typing..." rows="10" cols="30"></textarea><p><u></u></p>';
     newSticky.style.background = 'var(--to-do)';
     newSticky.style.cursor = 'cursor';
     todoContainer.appendChild(newSticky);
+    const toDoBttn = document.getElementById("todoBttn");
+
+    toDoBttn.addEventListener('change', ()=>{
+      savesticky(toDoBttn);
+    })
   
   
     })
+
+    
 
 
 // When the user clicks the button, open the modal 
