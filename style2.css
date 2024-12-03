@@ -1,156 +1,278 @@
- :root {
-     --business: #73F6FC;
-     --personal: #ffb9c5;
-     --main-color: #a1008c;
- }
+ :root{
+    --business: #73F6FC;
+    --personal: #ffb9c5;
+    --school: #7DD958;
+    --to-do: #FADA55;
+    --main-color: #8a6ee5;
+    --headerbackgroundcolor: rgb(138 110 229 / .5);
+}
+*{
+    font-family: 'hallowed grounds', sans-serif;
+}
 
- .header {
-     position: fixed;
-     top: 0;
-     left: 0;
-     width: 100%;
-     padding: 4rem 12% 4rem;
-     background: rgba (0, 0, 0, 0.3);
-     backdrop-filter: blur(10px);
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     z-index: 5;
- }
+#title{
+    color: white;
 
- .home-content {
-     display: flex;
-     flex-direction: column;
-     align-items: baseline;
-     text-align: center;
-     justify-content: center;
- }
+}
 
- span {
-     color: var(--main-color);
- }
+.background {
+    background-image: url('https://imgur.com/bxTl2ld.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center; height: 100vh;
+}
 
- .home-content h3 {
-     margin-bottom: 1rem;
-     margin-top: 1rem;
-     font-size: 1.5rem;
- }
+    .header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 4rem 12% 4rem;
+        background: rgba (0, 0, 0, 0.3);
+        backdrop-filter: blur(10px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 5;
+    }
 
- .home-content h1 {
-     font-size: 2rem;
-     font-weight: 300;
-     margin-top: 0.5rem;
-     line-height: 1;
- }
+    .home-content{
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        text-align: center;
+        justify-content: center;
+    }
 
- .text-animation {
-     font-size: 25px;
-     font-weight: 500;
-     min-width: 280px;
- }
+    span{
+        color: var(--main-color);
+    }
+    
+    .home-content h3{
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        font-size: 1.5rem;
+        color: white;
+    }
+    .home-content h1{
+        color: white;
+        font-size: 1.5rem;
+        font-weight: 200;
+        margin-top: 0.5rem;
+        line-height: 1;
+       
+    }
+    
+    .text-animation{
+        font-size: 25px;
+        font-weight: 500;
+        min-width: 280px;
+    }
+    .text-animation span{
+        position: relative;
+    }
+    .text-animation span::before{
+        content: "Students";
+        color: var(--main-color);
+        animation: words 20s infinite;
+    }
+    .text-animation span::after{
+        content: "";
+        position: absolute;
+        width: calc(100% + 8px);
+        height: 100%;
+        border-left: 3px solid var(--business);
+        right: -8px;
+        animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+    }
+    
+    @keyframes words{
+        0%
+        20%{
+            content: "Creative Thinkers";
+        }
+        21%,
+        40%{
+            content: "Engineers";
+        }
+        41%,
+        60%{
+            content: "Problem Solvers";  
+        }
+        61%,
+        80%{
+            content: "Software Developers";
+        }
+        81%,
+        100%{
+            content: "Go-Getters";
+        }
+    }
+    @keyframes typing{
+        10%,
+        15%,
+        30%,
+        35%,
+        50%,
+        55%,
+        70%,
+        75%,
+        90%,
+        95%{
+            width: 0;
+        }
+        5%,
+        20%,
+        25%,
+        40%,
+        45%,
+        60%,
+        65%,
+        80%,
+        85%{
+            width: calc(100% + 8px);
+        }
+    }
 
- .text-animation span {
-     position: relative;
- }
+    .to-do-app{
+        display: flex;
+        align-items: center;
+        flex-direction: inline;
+        justify-content: space-around;
+        background-color: var(--headerbackgroundcolor);
+    }
 
- .text-animation span::before {
-     content: "Students";
-     color: var(--main-color);
-     animation: words 20s infinite;
- }
+    .to-do-app button{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 5px;
+        border: 10px;
+        border-radius: 15px;
+        background-color: transparent;
+    }
 
- .text-animation span::after {
-     content: "";
-     background-color: white;
-     position: absolute;
-     width: calc(100% + 8px);
-     height: 100%;
-     border-left: 3px solid var(--business);
-     right: -8px;
-     animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
- }
+    .to-do-app #business{
+        color: var(--business);
+        font-weight: bolder;
+    }
 
- @keyframes words {
-     0% 20% {
-         content: "Creative Thinkers";
-     }
+    .to-do-app #business:hover {
+        box-shadow: 0 0 25px var(--business),
+        0 0 50px var(--business),
+        0 0 100px var(--business);
+    }
 
-     21%,
-     40% {
-         content: "Engineers";
-     }
+    .to-do-app #personal{
+        color: var(--personal);
+        font-weight: bolder;
+    }
 
-     41%,
-     60% {
-         content: "Problem Solvers";
-     }
+    .to-do-app #personal:hover{
+        box-shadow: 0 0 25px var(--personal),
+        0 0 50px var(--personal),
+        0 0 100px var(--personal);
+    }
 
-     61%,
-     80% {
-         content: "Software Developers";
-     }
+    .to-do-app #school{
+        color: var(--school);
+        font-weight: bolder;
+    }
+    .to-do-app #school:hover{
+        box-shadow: 0 0 25px var(--school),
+        0 0 50px var(--school),
+        0 0 100px var(--school);
+    }
 
-     81%,
-     100% {
-         content: "Go-Getters";
-     }
- }
+    .to-do-app #help{
+        color: white;
+        font-weight: bolder;
+    }
 
- @keyframes typing {
+    .to-do-app #help:hover{
+        box-shadow: 0 0 25px white,
+        0 0 50px white,
+        0 0 100px white;
+    }
 
-     10%,
-     15%,
-     30%,
-     35%,
-     50%,
-     55%,
-     70%,
-     75%,
-     90%,
-     95% {
-         width: 0;
-     }
+    .to-do-app #to-do{
+        color: var(--to-do);
+        font-weight: bolder;
+    }
+    .to-do-app #to-do:hover{
+        box-shadow: 0 0 25px var(--to-do),
+        0 0 50px var(--to-do),
+        0 0 100px var(--to-do);
+    }
 
-     5%,
-     20%,
-     25%,
-     40%,
-     45%,
-     60%,
-     65%,
-     80%,
-     85% {
-         width: calc(100% + 8px);
-     }
- }
+   #to-do-container .sticky-note {
+        position: absolute;
+        width: max-content;
+        display: block;
+        font-style: normal;
+        font-size: 0.95rem;
+        font-family: 'pernament marker', sans-serif;
+        top: 250px;
+        left: 75px; 
+        min-height: 200px;
+        border-top: 30px solid rgb(65, 64, 64);
+        border-radius: 10px;
+        padding: 10px;
+        box-shadow: 0 20px 50px #0004;
+        cursor: grab;
+}
 
- .to-do-app {
-     display: flex;
-     align-items: center;
+#to-do-container textarea{
+    all:unset;
+    border:none;
+}
 
- }
+#to-do-container .close{
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    height: 30px;
+    font-size: large;
+    padding-right: 10px;
+    cursor: pointer;
+    background-color: transparent;
+}
 
- .to-do-app button {
-     display: flex;
-     justify-content: space-between;
-     border-radius: 10px;
-     background-color: gray;
- }
 
- .to-do-app #business {
-     color: var(--business);
- }
 
- .to-do-app #personal {
-     color: var(--personal);
- }
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto; 
+    background-color: rgb(43, 43, 42); 
+    background-color: rgba(0,0,0,0.4); 
+}
 
- .input {
-     position: relative;
-     display: block;
-     width: 100%;
-     max-width: 500px;
-     min-height: 150px;
-     border-radius: 10px;
-     background: var(--business);
- }
+.modal-content {
+    background-color: rgb(43, 43, 42);
+    color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    cursor: pointer; 
+}
+
+.modalexit {
+        position: absolute;
+        bottom: 91%;
+        right: 0;
+        font-size: large;
+        padding-right: 10px;
+        cursor: pointer;
+}
+
+.modalheader{
+    position: relative;
+    text-align: center;
+}
