@@ -225,6 +225,7 @@
 #to-do-container textarea{
     all:unset;
     border:none;
+    height: 100px;
 }
 
 #to-do-container .close{
