@@ -30,6 +30,9 @@ The following image demonstrates the web application's appearance and functional
 *HTML 
 *CSS
 *Javascript
+*Github
+*Figma
+
 
 ## Live Demo Link
 
