@@ -33,7 +33,7 @@ The following image demonstrates the web application's appearance and functional
 
 ## Live Demo Link
 
-*(insert URL)
+(https://bfrausb.github.io/Buck-IT/)
 
 ## Direction for future development
 
