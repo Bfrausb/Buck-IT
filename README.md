@@ -20,7 +20,9 @@ As a busy person, I want to create an app that can help me structure my day and 
 ## Assets
 The following image demonstrates the web application's appearance and functionality:
 
-(insert mock up) 
+![alt text](Assets/image_720.png)
+![alt text](Assets/screenshot_2024-12-01_224403_720.png)
+
 
 
 ## Technologies used:
@@ -31,7 +33,7 @@ The following image demonstrates the web application's appearance and functional
 
 ## Live Demo Link
 
-*(insert URL)
+(https://bfrausb.github.io/Buck-IT/)
 
 ## Direction for future development
 
@@ -44,3 +46,5 @@ The following image demonstrates the web application's appearance and functional
 *Option to title sticky notes
 
 *Nav bar to add options to share to social media, contact, info and help to report sign-in issues.
+
+[def]: screenshot_2024-12-01_224403_720.png
